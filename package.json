@@ -8,7 +8,8 @@
     "dev": "npx babel-node 0x00-ES6_basic/src/1-main.js"
   },
   "repository": {
-    "type": "git"
+    "type": "git",
+    "url": "git+https://github.com/Anphimens/alx-frontend-javascript.git"
   },
   "keywords": [],
   "author": "",
