@@ -4,12 +4,10 @@ export default class HolbertonClass {
     this._location = location;
   }
 
-  /* Method to return size when cast to a number */
   valueOf() {
     return this._size;
   }
 
-  /* Method to return location when cast to a string */
   toString() {
     return this._location;
   }
