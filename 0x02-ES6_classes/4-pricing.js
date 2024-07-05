@@ -1,29 +1,23 @@
-import Currency from "./3-currency.js";
-
 export default class Pricing {
-  constructor(amount, Currency) {
-    /* Assign attributes */
+  constructor(amount, currency) {
     this._amount = amount;
-    this._currency = Currency;
+    this._currency = currency;
+  }
 
-    /* Define getters and setter */
-    Object.defineProperty(this, "amount", {
-      get: function () {
-        return this._amount;
-      },
-      set: function (newAmount) {
-        this._amount = newAmount;
-      },
-    });
+  get amount() {
+    return this._amount;
+  }
 
-    Object.defineProperty(this, "currency", {
-      get: function () {
-        return this._currency;
-      },
-      set: function (newCurrency) {
-        this._currency = newCurrency;
-      },
-    });
+  set amount(n) {
+    this._amount = n;
+  }
+
+  get currency() {
+    return this._currency;
+  }
+
+  set currency(n) {
+    this._currency = n;
   }
 
   displayFullPrice() {

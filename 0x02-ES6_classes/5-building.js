@@ -1,17 +1,16 @@
 export default class Building {
   constructor(sqft) {
     this._sqft = sqft;
-
-    Object.defineProperty(this, "sqft", {
-      get: function () {
-        return this._sqft;
-      },
-    });
+    if (this.constructor !== Building && this.evacuationWarningMessage === undefined) {
+      throw Error('Class extending Building must override evacuationWarningMessage');
+    }
   }
 
-  evacuationWarningMessage() {
-    throw new Error(
-      "Class extending Building must override evacuationWarningMessage"
-    );
+  get sqft() {
+    return this._sqft;
+  }
+
+  set sqft(value) {
+    this._sqft = value;
   }
 }
